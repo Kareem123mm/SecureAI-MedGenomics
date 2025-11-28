@@ -317,11 +317,9 @@ public
 # ============================================================
 
 # Model files (can be large)
-*.pth
 *.pt
 *.h5
 *.hdf5
-*.pkl
 *.pickle
 *.joblib
 *.onnx
