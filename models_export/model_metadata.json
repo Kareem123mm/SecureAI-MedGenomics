@@ -1,0 +1,22 @@
+{
+  "disease_risk": {
+    "best_model": "xgb_disease_risk.pkl",
+    "accuracy": 0.95,
+    "auc_roc": 0.8936251920122888,
+    "input_features": 587,
+    "model_type": "classification"
+  },
+  "drug_response": {
+    "best_model": "rf_drug_response.pkl",
+    "r2_score": 0.3160103728506226,
+    "rmse": 0.21101593477134484,
+    "input_features": 587,
+    "model_type": "regression"
+  },
+  "preprocessing": {
+    "genomic_features_count": 587,
+    "drug_response_features_count": 587,
+    "scaling": "StandardScaler",
+    "encoding": "dosage"
+  }
+}

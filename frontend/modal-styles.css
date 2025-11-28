@@ -1,0 +1,362 @@
+/* Enhanced Modal Styles for Confirmation and Certificates */
+
+/* Custom Confirmation Dialog */
+.custom-confirm-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.custom-confirm-content {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 16px;
+    padding: 0;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.3s ease-out;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.custom-confirm-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    padding: 24px;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.custom-confirm-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.custom-confirm-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.custom-confirm-body {
+    padding: 28px;
+}
+
+.file-info-box {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.file-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    color: #e2e8f0;
+}
+
+.file-info-label {
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+.file-info-value {
+    font-weight: 600;
+    color: #60a5fa;
+    font-family: 'Courier New', monospace;
+}
+
+.security-checklist {
+    margin: 20px 0;
+}
+
+.security-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+}
+
+.security-checklist-item svg {
+    flex-shrink: 0;
+}
+
+.custom-confirm-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.custom-confirm-btn {
+    flex: 1;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.custom-confirm-btn-cancel {
+    background: rgba(148, 163, 184, 0.2);
+    color: #cbd5e1;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.custom-confirm-btn-cancel:hover {
+    background: rgba(148, 163, 184, 0.3);
+    transform: translateY(-1px);
+}
+
+.custom-confirm-btn-confirm {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.custom-confirm-btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+/* Enhanced Proof of Deletion Certificate */
+.proof-certificate .modal-content {
+    max-width: 700px;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+.certificate-header {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 32px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.certificate-badge {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    animation: checkmarkPop 0.5s ease-out;
+}
+
+.certificate-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.certificate-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    margin: 0;
+}
+
+.certificate-body {
+    padding: 32px;
+}
+
+.certificate-section {
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.certificate-field {
+    margin-bottom: 16px;
+}
+
+.certificate-field:last-child {
+    margin-bottom: 0;
+}
+
+.certificate-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.certificate-value {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e2e8f0;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.hash-explanation {
+    background: rgba(16, 185, 129, 0.1);
+    border-left: 3px solid #10b981;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.hash-explanation-title {
+    color: #10b981;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hash-explanation-text {
+    color: #1e293b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.verification-steps {
+    background: rgba(37, 99, 235, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.verification-steps-title {
+    color: #60a5fa;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 12px 0;
+}
+
+.verification-step {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #1e293b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.verification-step-number {
+    background: #2563eb;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.certificate-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.certificate-btn {
+    flex: 1;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.certificate-btn-print {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.certificate-btn-print:hover {
+    background: rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+.certificate-btn-download {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.certificate-btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+
+.certificate-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes checkmarkPop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

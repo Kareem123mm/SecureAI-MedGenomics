@@ -1,0 +1,8 @@
+>malicious_sequence_with_sql_injection'; DROP TABLE genomic_files; --
+ATCGATCGATCGATCG
+>normal_sequence
+GCTAGCTAGCTAGCTA
+>suspicious_pattern_<script>alert('xss')</script>
+TTAATTAATTAATTAA
+>command_injection_test`rm -rf /`
+CGCGCGCGCGCGCGCG

@@ -1,0 +1,199 @@
+/* Fix for text visibility and security layers */
+
+.security-layers-indicator {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 32px 24px;
+    margin: 40px auto;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.security-layer {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 24px 20px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 140px;
+    flex: 0 1 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.security-layer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.security-layer:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: #3b82f6;
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25), 0 0 0 4px rgba(59, 130, 246, 0.1);
+    transform: translateY(-6px) scale(1.02);
+}
+
+.security-layer:hover::before {
+    opacity: 0.03;
+}
+
+.layer-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+    transition: transform 0.4s ease;
+}
+
+.security-layer:hover .layer-icon {
+    transform: scale(1.1) rotateZ(5deg);
+}
+
+.layer-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+}
+
+.layer-status {
+    font-size: 22px;
+    color: #10b981;
+    display: block;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.security-layer:hover .layer-status {
+    transform: scale(1.2);
+}
+
+/* Hero section text fixes */
+.hero-title {
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 400;
+}
+
+/* Form labels and text */
+.form-label {
+    color: #1f2937 !important;
+}
+
+/* Timeline text fixes */
+.step-name {
+    color: #1f2937 !important;
+}
+
+.step-status {
+    color: #6b7280 !important;
+}
+
+/* Results text */
+.result-card-label {
+    color: #6b7280 !important;
+}
+
+.result-card-value {
+    color: #111827 !important;
+}
+
+/* Status text */
+#status-text {
+    color: #1f2937 !important;
+}
+
+/* General text visibility fixes */
+body {
+    color: #1f2937;
+}
+
+.container h2,
+.container h3 {
+    color: #111827 !important;
+}
+
+p {
+    color: #4b5563;
+}
+
+/* Upload card enhancement */
+.upload-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+/* Feature cards enhancement */
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+.feature-title {
+    color: #111827 !important;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 16px 0 8px 0;
+}
+
+.feature-text {
+    color: #6b7280 !important;
+    line-height: 1.6;
+}
+
+/* Button enhancements */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    background: #9ca3af;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}

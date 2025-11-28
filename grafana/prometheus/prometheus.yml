@@ -1,0 +1,40 @@
+# Global configuration
+global:
+  scrape_interval: 15s  # Scrape targets every 15 seconds
+  evaluation_interval: 15s  # Evaluate rules every 15 seconds
+
+# Alertmanager configuration (optional)
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+# Rule files (for alerts)
+rule_files:
+  # - "alerts.yml"
+
+# Scrape configurations
+scrape_configs:
+  # SecureAI-MedGenomics Backend
+  - job_name: 'secureai_backend'
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+        labels:
+          service: 'backend'
+          environment: 'development'
+    
+    # Scrape /metrics endpoint
+    metrics_path: '/metrics'
+    
+    # Scrape interval
+    scrape_interval: 10s
+
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Grafana monitoring (optional)
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana:3000']

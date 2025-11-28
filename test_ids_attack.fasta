@@ -1,0 +1,10 @@
+>sequence_1
+ATCGATCGATCG
+>../../../../etc/passwd
+GCTAGCTAGCTA
+>../../windows/system32/config/sam
+TTAATTAATTAA
+>payload_exec('malicious_code')
+CGCGCGCGCGCG
+>union_select_*_from_users--
+AGTCAGTCAGTC

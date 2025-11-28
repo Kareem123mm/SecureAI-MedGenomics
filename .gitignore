@@ -1,0 +1,628 @@
+# ============================================================
+# SecureAI-MedGenomics - .gitignore
+# ============================================================
+# Comprehensive ignore file for genomic security platform
+# ============================================================
+
+# ============================================================
+# SECURITY - NEVER COMMIT THESE!
+# ============================================================
+
+# Sensitive genomic data files
+
+*.fastq
+*.fa
+*.fq
+*.sam
+*.bam
+*.vcf
+*.bed
+*.gff
+*.gtf
+
+# Encrypted genomic files
+*.cryfa
+encrypted/
+*.enc
+*.encrypted
+
+# Private keys and certificates
+*.key
+*.pem
+*.cert
+*.p12
+*.pfx
+secrets/
+.secrets/
+
+# Environment variables with secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Database files with sensitive data
+*.db
+*.sqlite
+*.sqlite3
+genomic_data.db
+*.db-journal
+
+# Authentication tokens
+auth_tokens.txt
+api_keys.json
+credentials.json
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+backend/venv/
+backend/ENV/
+backend/env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================
+# NODE.JS / JAVASCRIPT
+# ============================================================
+
+# Dependencies
+node_modules/
+jspm_packages/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Build outputs
+dist/
+dist-ssr/
+*.local
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+
+# Gatsby files
+.cache/
+public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+
+# Docusaurus cache and generated files
+.docusaurus
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ============================================================
+# AI MODELS & MACHINE LEARNING
+# ============================================================
+
+# Model files (can be large)
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.pb
+*.tflite
+*.caffemodel
+*.mlmodel
+
+# Model directories
+models/
+checkpoints/
+saved_models/
+model_weights/
+
+# Training artifacts
+logs/
+runs/
+tensorboard/
+mlruns/
+wandb/
+
+# Datasets (genomic datasets can be huge)
+data/
+datasets/
+raw_data/
+processed_data/
+training_data/
+test_data/
+
+# ============================================================
+# OPERATING SYSTEMS
+# ============================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================
+# IDEs & EDITORS
+# ============================================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history/
+*.vsix
+
+# JetBrains IDEs (PyCharm, IntelliJ, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+sftp-config-alt*.json
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+GitHub.sublime-settings
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+*_archive
+*_flymake.*
+/eshell/history
+/eshell/lastdir
+/elpa/
+*.rel
+/auto/
+.cask/
+dist/
+flycheck_*.el
+/server/
+.projectile
+.dir-locals.el
+/network-security.data
+
+# ============================================================
+# PROJECT-SPECIFIC
+# ============================================================
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+tempCodeRunnerFile.py
+
+# Output directories
+outputs/
+results/
+exports/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Test files (keep test files but ignore test outputs)
+test_outputs/
+test_results/
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# ============================================================
+# CRYFA ENCRYPTION TOOL
+# ============================================================
+
+# Cryfa build artifacts
+cryfa/build/
+cryfa/obj/
+cryfa/*.o
+cryfa/cryfa
+cryfa/cryfa.exe
+
+# Cryfa temporary files
+*.cryfa.tmp
+*.decrypted.tmp
+
+# ============================================================
+# BIOINFORMATICS TOOLS
+# ============================================================
+
+# BLAST databases
+*.nhr
+*.nin
+*.nsq
+*.nto
+*.ntf
+*.nog
+
+# Bowtie indexes
+*.bt2
+*.ebwt
+
+# BWA indexes
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+
+# Samtools indexes
+*.bai
+*.csi
+*.crai
+
+# ============================================================
+# DOCKER & CONTAINERS
+# ============================================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# ============================================================
+# CI/CD
+# ============================================================
+
+# GitHub Actions
+.github/workflows/*.yml.bak
+
+# ============================================================
+# MISCELLANEOUS
+# ============================================================
+
+# Archives (genomic data can be archived)
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+
+# Large files (Git LFS should handle these)
+*.iso
+*.dmg
+
+# Thumbnails
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.ico
+*.svg
+
+# ============================================================
+# KEEP THESE FILES (Override above rules)
+# ============================================================
+
+# Keep empty directories
+!.gitkeep
+
+# Keep example/sample files
+!sample.fasta
+!example.fastq
+!test_small.fa
+
+# Keep documentation images
+!docs/*.png
+!docs/*.jpg
+!README_assets/*.png
+
+# Keep model configuration files (not the models themselves)
+!models/config.json
+!models/README.md
+
+# Keep example environment file
+!.env.example
+
+# ============================================================
+# END OF .gitignore
+# ============================================================

@@ -1,0 +1,4 @@
+This is not a valid FASTA file at all.
+It's just plain text that should fail genomics authentication.
+No sequences here!
+Just random text content.
